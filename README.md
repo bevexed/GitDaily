@@ -64,7 +64,7 @@
 > 克隆远程仓库
 > * git clone git@github.com:*/*.git
 
-## git 分支小结
+## git 分支
 >查看分支：git branch
 >
 >创建分支：git branch <name>
