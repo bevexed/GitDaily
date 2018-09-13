@@ -1,4 +1,5 @@
-git init
-git config --list
-git config --global user.name ""
-git config --global user.email ""
+# GIT
+### git init
+> 初始化git
+### git add <文件名>
+> 添加文件到git中
