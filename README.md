@@ -76,3 +76,18 @@
 >合并某分支到当前分支：git merge <name>
 >
 >删除分支：git branch -d <name>
+
+### git stash
+> 把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+> > 1. 首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支
+> > * git checkout master
+> > * git checkout -b issue-101
+> > 2. 修复完成后，切换到master分支，并完成合并，最后删除issue-101分支
+> > * git checkout master
+> > * git merge --no-ff -m "merged bug fix 101" issue-101
+> > 3. 切换会dev分支
+> > * git checkout dev
+> > * git stash list  查看工作现场
+> > > 工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
+> > >  * 一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+> > >  * 另一种方式是用git stash pop，恢复的同时把stash内容也删了：
