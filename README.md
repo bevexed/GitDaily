@@ -78,7 +78,7 @@
 >删除分支：git branch -d <name>
 
 ### git stash
-> 把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+> bug分支 把当前工作现场“储藏”起来，等以后恢复现场后继续工作
 > > 1. 首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支
 > > * git checkout master
 > > * git checkout -b issue-101
@@ -93,3 +93,10 @@
 > > >  * 另一种方式是用git stash pop，恢复的同时把stash内容也删了：
 > > > > 恢复指定的stash
 > > > > * git stash apply stash@{0}
+
+### git remote -v
+> 查看远程仓库地址
+
+### git tag \<name>
+> 打标签
+> > git show \<tagname>
